@@ -14,6 +14,8 @@ top_img:
 mathjax: true
 ---
 
+【提示：Github中Front-matter以表格形式显示】
+
 # 简介
 
 ## 文章使用方法
