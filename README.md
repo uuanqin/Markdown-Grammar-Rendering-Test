@@ -10,12 +10,12 @@ tags:
   - Obsidian
   - Microsoft
   - Github
+  - Katex
 cover: 'https://cdn.gallery.uuanqin.top/img/mdcover65465.png'
 description: 以 CommonMark、GFM 标准为基础进行测试。
 categories:
-  - 工具箱
   - 核心协同
-mathjax: true
+katex: true
 date: 2023-06-01 22:06:06
 top_img:
 ---
@@ -28,25 +28,25 @@ top_img:
 
 这原本是一篇 Typora 下使用 Markdown 语法的案例实践分享，最早创建于 2021 年 11 月之前，于 2023 年 6 月大改。本篇文章使用 Markdown 标记语法编写而成，汇聚了常用 Markdown 语法标注。对于不同目标人群有不同的作用：
 
-* 对于 Markdown 学习者。可以获取文章源码（Github 地址如下），并使用你的本地编辑器打开。通过对比标记语言与渲染结果直接学习。如果你不喜欢这种 MarkDown 学习方式，你可以参考 GitHub 学习相关 Markdown 规范：[基本撰写和格式语法 - GitHub 文档](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+* 对于 Markdown 学习者。可以获取文章源码（Github 仓库地址在下面），并使用你的本地编辑器打开。通过对比标记语言与渲染结果直接学习。如果你不喜欢这种 MarkDown 学习方式，你可以参考 GitHub 学习相关 Markdown 规范：[基本撰写和格式语法 - GitHub 文档](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 * 对于其他人。这篇文章包含不同标准 Markdown 语法，你可以在任何 Markdown 编辑器打开以测试其渲染效果。
-	* 比如说——你。你使用什么方式看到这篇文章，就了解到你所用的软件对 Markdown 语言的支持情况。如果你通过我的博客打开，那么你看到的就是 Hexo 渲染后的结果（至少 2023 年时是这样）。
+	* 比如说——你。你使用什么方式看到这篇文章，就了解到你所用的软件对 Markdown 语言的支持情况。如果你通过我的博客打开，那么你看到的就是 Hexo 渲染后的结果（至少目前时是这样）。
 	* 比如说——我，笔记重度依赖。我需要对比本地编辑器的渲染器与 Hexo 各类渲染器和插件对 Markdown 的支持程度，以培养合适的写作习惯，加强核心工作流的可移植性。
 
 文章目前可预览的在线版本：
 
 * Hexo 渲染网页：[Markdown渲染测试 | 半方池水半方田 (uuanqin.top)](https://uuanqin.top/p/3c4a82e6/)。源文件直接通过 Hexo 渲染生成的静态网页。
-* Github 仓库： https://github.com/uuanqin/Markdown-Grammar-Rendering-Test 。源文件的副本，定期与 Hexo 本地同步。
+* Github 仓库： https://github.com/uuanqin/Markdown-Grammar-Rendering-Test 。源文件的副本，不定期与 Hexo 本地同步。
 
 ## Markdown 标准
 
-约翰·格鲁伯在 2004 年创造了 Markdown 语言，[Daring Fireball: Markdown](https://daringfireball.net/projects/markdown/)。格鲁伯认为不应完全标准化：“不同的网站（和人们）有不同的需求。没有一种语法可以让所有人满意。[^satisfy]”
+约翰·格鲁伯在 2004 年创造了 Markdown 语言，[Daring Fireball: Markdown](https://daringfireball.net/projects/markdown/)。格鲁伯认为不应完全标准化：「不同的网站（和人们）有不同的需求。没有一种语法可以让所有人满意。[^satisfy]」
 
-[satisfy]: [Markdown - 维基百科，自由的百科全书 (wikipedia.org)](https://zh.wikipedia.org/wiki/Markdown)
+[^satisfy]: [Markdown - 维基百科，自由的百科全书 (wikipedia.org)](https://zh.wikipedia.org/wiki/Markdown)
 
 下文将从 Commonmark、GFM 为基础分板块进行 Markdown 渲染测试。
 
-此外，对一些 Markdown 编辑器语法进行展示。其中，Typora 版本为最后一个免费版本（0.11.18），Obsidian 版本为 1.3.4。
+此外，对一些 Markdown 编辑器语法进行展示。其中，本文使用的 Typora 版本为 1.8.10，Obsidian 版本为 1.6.7。
 
 # 基础（CommonMark）
 
@@ -119,6 +119,8 @@ top_img:
 [带参考的链接 1][1] 链接外文字 [带参考链接 2][1] 链接外文字
 
 [1]:http://b.org
+
+链接悬停提示写法：[Title](https://a.com "hint")
 
 ![图片链接](https://commonmark.org/help/images/favicon.png)
 
@@ -256,7 +258,7 @@ GitHub Flavored Markdown, often shortened as GFM, is the dialect of Markdown tha
 </p>
 </details>
 
-【提示】Typora 看起来不支持，Obsidian 支持。
+【提示】Typora ，Obsidian 不支持。
 
 ### 代码块
 
@@ -386,7 +388,7 @@ solid cube_corner
 endsolid
 ```
 
-【提示】Typora、Obsidian 不支持 `geojson` 、 `topojson` 或 `ASCII STL ` 语法。
+【提示】Typora、Obsidian 不支持 `geojson` 、 `topojson` 或 `ASCII STL` 语法。
 
 ### 数学表达式
 
@@ -408,13 +410,13 @@ $$
 
 * 在数学表达式内，在显式 `$` 之前添加一个 `\` 符号。
   * This expression uses `\$` to display a dollar sign: $\sqrt{\$4}$
-
-
-
 * 在数学表达式之外，但在同一行上，在显式 `$` 两边使用 span 标记。
-	* To split <span>$</span>100 in half, we calculate $100/2$
+	* To split <span>$</span>100 in half, we calculate $​100/2$
+	* 【提示】Typora 不支持。
 
 如果你还想学习更多，请看 [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+
+在网页上以文本的形式展示数学公式，只需要一个 LaTeX 的子集能渲染数学公式即可。KaTeX 就是这样一个支持 HTML 的轻量级的数学公式引擎。因此，在网页中编写数学公式应注意使用兼容性更广的语法。
 
 # Typora
 
@@ -441,6 +443,7 @@ _ _ _
 <kbd>Esc</kbd>
 
 段落的换行是使用两个以上的空格加回车（在 Typora 编辑器里是<kbd>Shift</kbd>+<kbd>Enter</kbd>）
+
 或者使用 HTML 标签<br>进行换行
 
 不要吝惜回车，在一些情况下回车会被吞掉！
@@ -508,9 +511,7 @@ Obsidian doesn't support Markdown syntax or blank lines within HTML blocks.
 
 通过 **\[\[ \]\]** 来链接库中任意一个文件。
 
-```markdown
-链接一篇笔记：[[内部链接]]。
-```
+链接一篇笔记：例如 [[双链渲染测试]]。
 
 你可以将图片或者音频等附件嵌入到你的笔记中。嵌入文件的语法为 **\!\[\[文件名.png\]\]**
 
@@ -586,41 +587,10 @@ Markdown 风格的嵌入，使用 **\!\[AltText\|100x100\]\(https://url/to/image
 
 ## 标注 Callouts
 
-> GFM也存在类似的语法：[Style guide - GitHub Docs](https://docs.github.com/en/contributing/style-guide-and-content-model/style-guide)
-> Microsoft也有类似的语法：[Markdown reference for Microsoft Learn - Contributor guide | Microsoft Learn](https://learn.microsoft.com/en-us/contribute/content/markdown-reference)
+参考：[Callouts](https://help.obsidian.md/Editing+and+formatting/Callouts)
 
-在不打断笔记流的情况下使用标注附加内容。
-
-> [!info]
-> 默认标题
-> Here's a callout block.
-> It supports **Markdown**, *Wikilinks and embeds*!
-> 
-> 无序列表：
-> 
-> - 项目 1
->   
-> 有序列表：
-> 
-> 1. 项目 a
-
-> [!tip] 自定义标题
-> 公式渲染：
-> $$
-> r+v-e=2
-> $$
-> 
-> 行内代码：`Class<?> class = MyClass.class;`
-> 
-> 图片：![图片链接](https://commonmark.org/help/images/favicon.png)
-
-> [!error] 标题内公式 $a^2+b^2=c^2$，标题内代码 `Hello world!`
-
-> [!cite] 标题内图片：![图片链接](https://commonmark.org/help/images/favicon.png)图片后文字
-
-> [!question] Can callouts be nested?
-> > [!todo] Yes!, they can.
-> > > [!example]  You can even use multiple layers of nesting.
+> GFM 也存在类似的语法：[Style guide - GitHub Docs](https://docs.github.com/en/contributing/style-guide-and-content-model/style-guide)
+> Microsoft 也有类似的语法，详看后文。
 
 支持以下类型：
 
@@ -648,10 +618,8 @@ Markdown 风格的嵌入，使用 **\!\[AltText\|100x100\]\(https://url/to/image
 > Lorem ipsum dolor sit amet
 
 > [!summary]
-> Lorem ipsum dolor sit amet
 
 > [!tldr]
-> Lorem ipsum dolor sit amet
 
 > [!info]
 > Lorem ipsum dolor sit amet
@@ -663,52 +631,41 @@ Markdown 风格的嵌入，使用 **\!\[AltText\|100x100\]\(https://url/to/image
 > Lorem ipsum dolor sit amet
 
 > [!hint]
-> Lorem ipsum dolor sit amet
 
 > [!important]
-> Lorem ipsum dolor sit amet
 
 > [!success]
 > Lorem ipsum dolor sit amet
 
 > [!check]
-> Lorem ipsum dolor sit amet
 
 > [!done]
-> Lorem ipsum dolor sit amet
 
 > [!question]
 > Lorem ipsum dolor sit amet
 
 > [!help]
-> Lorem ipsum dolor sit amet
 
 > [!faq]
-> Lorem ipsum dolor sit amet
 
 > [!warning]
 > Lorem ipsum dolor sit amet
 
 > [!caution]
-> Lorem ipsum dolor sit amet
 
 > [!attention]
-> Lorem ipsum dolor sit amet
 
 > [!failure]
 > Lorem ipsum dolor sit amet
 
 > [!fail]
-> Lorem ipsum dolor sit amet
 
 > [!missing]
-> Lorem ipsum dolor sit amet
 
 > [!danger]
 > Lorem ipsum dolor sit amet
 
 > [!error]
-> Lorem ipsum dolor sit amet
 
 > [!bug]
 > Lorem ipsum dolor sit amet
@@ -720,7 +677,52 @@ Markdown 风格的嵌入，使用 **\!\[AltText\|100x100\]\(https://url/to/image
 > Lorem ipsum dolor sit amet
 
 > [!cite]
-> Lorem ipsum dolor sit amet
+
+折叠：
+
+> [!question]- 折叠尝试（无折叠内容）
+
+> [!cite]- 折叠尝试（默认关）
+> 折叠内容
+
+> [!success]- 折叠尝试（默认开）
+> 折叠内容
+
+在不打断笔记流的情况下使用标注附加内容。
+
+> [!info]
+> 默认标题
+> Here's a callout block.
+> It supports **Markdown**, *Wikilinks and embeds*!
+>
+> 无序列表：
+>
+> - 项目 1
+>
+> 有序列表：
+>
+> 1. 项目 a
+
+> [!tip] 自定义标题
+> 公式渲染：
+> $$
+> r+v-e=2
+> $$
+>
+> 行内代码：`Class<?> class = MyClass.class;`
+>
+> 图片：![图片链接](https://commonmark.org/help/images/favicon.png)
+
+> [!error] 标题内公式 $a^2+b^2=c^2$，标题内代码 `Hello world!`
+
+> [!cite] 标题内图片：![图片链接](https://commonmark.org/help/images/favicon.png)图片后文字
+
+> [!question] Can callouts be nested?
+> > [!todo] Yes!, they can.
+> > > [!example]+  You can even use multiple layers of nesting.
+> > > > [!cite]- 折叠尝试
+> > > > 折叠内容
+
 
 ## 其他
 
@@ -729,6 +731,8 @@ Markdown 风格的嵌入，使用 **\!\[AltText\|100x100\]\(https://url/to/image
 Obsidian 通过 [Mermaid](https://mermaid-js.github.io/) 及其所提供的 [编译器](https://mermaid-js.github.io/mermaid-live-editor) 来为用户提供图表的绘制功能。
 
 # Microsoft Learn
+
+> 参考：[Markdown reference for Microsoft Learn - Contributor guide | Microsoft Learn](https://learn.microsoft.com/en-us/contribute/content/markdown-reference)
 
 Microsoft Learn 还支持自定义 Markdown 扩展。
 
@@ -753,7 +757,7 @@ Microsoft Learn 还支持自定义 Markdown 扩展。
 
 【提示：与 OFM 的 Callouts 语法一致，具体详看 OFM】
 
-# 附
+# 附录
 
 ## HTML 支持情况
 
@@ -983,4 +987,19 @@ e=>end: 结束框
 st->op->cond
 cond(yes)->io->e
 cond(no)->sub1(right)->op
+```
+
+## PlantUML 文本绘图
+
+```plantuml
+@startuml
+Bob -> Alice : hello
+Alice -> Wonderland: hello
+Wonderland -> next: hello
+next -> Last: hello
+Last -> next: hello
+next -> Wonderland : hello
+Wonderland -> Alice : hello
+Alice -> Bob: hello
+@enduml
 ```
